@@ -1,12 +1,14 @@
 import { React } from 'react';
 import './App.scss';
-import SimpleButton from './components/simpleButton';
+import RandomShapes from './components/RandomShapes';
+import Shape from './components/shape';
+import RandomColors from './components/RandomColor';
 
-const App = ({ state: { count, refreshID }}) =>
+const App = (context) =>
 	<div className="App">
-		<div>Count: { count }</div>
-		<div>{ SimpleButton() }</div>
-		<div>Refresh ID: { refreshID }</div>
+		<RandomShapes { ...context }/>
+		<Shape { ...context }/>
+		<RandomColors { ...context }/>
 	</div>;
 
 export default App;
