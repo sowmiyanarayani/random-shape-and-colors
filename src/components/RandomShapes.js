@@ -1,4 +1,5 @@
 /* eslint-disable max-lines-per-function */
+
 import { React } from 'react';
 const RandomShapes = (context) => {
 	const {
@@ -20,7 +21,7 @@ const RandomShapes = (context) => {
 		{ boxesArray.map((box, index) =>
 			<div
 				key={ index }
-				style={ { ...shapeStyles[shape], backgroundColor: color } }
+				style={ { ...shapeStyles[shape], backgroundColor: `#${ color }` } }
 			/>) }
 	</div>;
 };
